@@ -17,8 +17,8 @@ public class OptionalExample {
 		Optional<String> gender = Optional.of("MALE");
         Optional<String> emptyGender = Optional.empty();
         
-        System.out.println(gender);
-        System.out.println(emptyGender);
+        System.out.println(gender); //Optional[MALE]
+        System.out.println(emptyGender);//Optional.empty
         
         System.out.println(gender.orElse("<N/A>")); //MALE
         System.out.println(emptyGender.orElse("<N/A>")); //<N/A>
@@ -37,6 +37,8 @@ public class OptionalExample {
         System.out.println(gender.filter(g -> g.equals("male"))); //Optional.empty
         System.out.println(gender.filter(g -> g.equalsIgnoreCase("MALE"))); //Optional[MALE]
         System.out.println(emptyGender.filter(g -> g.equalsIgnoreCase("MALE"))); //Optional.empty
+        
+        System.out.println(Optional.ofNullable(null));//Optional.empty
 		
 	}
 }

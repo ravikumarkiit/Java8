@@ -12,6 +12,8 @@ public class FunctionInterfaceDefaultMethodExp {
         FunctionInterfaceDefaultMethod impl = new FunctionInterfaceDefaultMethodImpl();
         impl.perform("Test Impl");
         impl.defaultMethod();
+        
+        
         FunctionInterfaceDefaultMethodImpl.staticMethod();
     }
 

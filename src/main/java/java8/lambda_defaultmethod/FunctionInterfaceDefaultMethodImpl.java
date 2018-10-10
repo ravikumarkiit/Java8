@@ -11,8 +11,8 @@ public class FunctionInterfaceDefaultMethodImpl implements FunctionInterfaceDefa
 	public void defaultMethod(){ // Can be overriden in implementing classes
         System.out.println("In Impl Default method called");
     }
-
-    static void staticMethod(){ // Can't be overriden in implementing classes
+	
+	static void staticMethod(){ // Can't be overriden in implementing classes
         System.out.println("In Impl static method called in");
     }
 }

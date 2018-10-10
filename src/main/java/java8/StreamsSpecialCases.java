@@ -39,7 +39,22 @@ public class StreamsSpecialCases {
         int[] result = IntStream.range(0, 5).toArray();
         Arrays.stream(result).forEach(System.out::println);
         
-        
+        System.out.println("hcf="+hcf());
+	}
+	
+	public static int hcf() {
+		int[] arr = {81,153};
+		Arrays.sort(arr);
+		int hcf = 1;
+        /*for(int i = 1; i <= arr[0]; i++) {
+        	int element = i;
+        	hcf = Arrays.stream(arr).allMatch(a-> a%element==0) ? element : hcf;
+        }*/
+        for(int i = arr[0]; i >1 && hcf == 1; i--) {
+        	int element = i;
+        	hcf = Arrays.stream(arr).allMatch(a-> a%element==0) ? element : hcf;
+        }
+        return hcf;
 	}
 
 }
